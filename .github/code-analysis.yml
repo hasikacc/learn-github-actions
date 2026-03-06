@@ -1,0 +1,21 @@
+name: Code Quality Analysis
+on:
+  push:
+    branches:
+      - master
+jobs:
+  check-code-flake8:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      content: read
+      security-events: write
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Set up Python environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: flake8 Lint
+        uses: py-actions/flake8@v2
