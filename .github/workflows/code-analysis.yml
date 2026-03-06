@@ -6,10 +6,6 @@ on:
 jobs:
   check-code-flake8:
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      content: read
-      security-events: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
