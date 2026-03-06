@@ -1,4 +1,6 @@
 """
+Simple python code to understand github actions workflow.
+
 Given an integer array nums, return true if any value appears
 more than once in the array, otherwise return false.
 
@@ -17,6 +19,7 @@ Output: false
 
 
 def main():
+    """Check whether the list contains duplicate values."""
     nums = [1, 2, 2, 3]
     seen = set()
     for i in nums:
